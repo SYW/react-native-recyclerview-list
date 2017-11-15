@@ -283,6 +283,11 @@ public class RecyclerViewBackedScrollView extends RecyclerView {
         ((ReactListAdapter) getAdapter()).addView(child, index);
     }
 
+    /*package*/ void setHorizontal(boolean horizontal) {
+        if (horizontal)
+            setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
+    }
+
     /*package*/ void removeViewFromAdapter(int index) {
         ((ReactListAdapter) getAdapter()).removeViewAt(index);
     }

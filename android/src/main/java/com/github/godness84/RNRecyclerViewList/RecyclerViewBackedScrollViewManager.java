@@ -79,6 +79,11 @@ public class RecyclerViewBackedScrollViewManager extends
         parent.setItemAnimatorEnabled(enabled);
     }
 
+    @ReactProp(name = "horizontal", defaultBoolean = false)
+    public void setHorizontal(RecyclerViewBackedScrollView parent, boolean horizontal) {
+        parent.setHorizontal(horizontal);
+    }
+
     @Override
     public Map<String, Integer> getCommandsMap() {
         return MapBuilder.of(
